@@ -76,11 +76,12 @@
         android:layout_height="wrap_content"
         android:text="Player 2"
         android:id="@+id/player2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/score_player1"
         android:layout_toEndOf="@+id/score_player1"
-        android:layout_marginLeft="76dp"
-        android:layout_marginStart="76dp"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -140,9 +141,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Player 3"
         android:id="@+id/player3"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/score_player2"
+        android:layout_toEndOf="@+id/score_player2" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -150,9 +153,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Total Lives: 20"
         android:id="@+id/score_player3"
-        android:layout_below="@+id/player3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/btn_up1_p3"
+        android:layout_alignLeft="@+id/btn_up1_p3"
+        android:layout_alignStart="@+id/btn_up1_p3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -160,9 +163,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Player 4"
         android:id="@+id/player4"
-        android:layout_alignTop="@+id/player3"
-        android:layout_alignLeft="@+id/btn_dn1_p2"
-        android:layout_alignStart="@+id/btn_dn1_p2" />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/score_player3"
+        android:layout_toEndOf="@+id/score_player3"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -170,7 +175,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Total Lives: 20"
         android:id="@+id/score_player4"
-        android:layout_above="@+id/btn_up5_p4"
+        android:layout_below="@+id/player4"
         android:layout_alignRight="@+id/btn_up5_p4"
         android:layout_alignEnd="@+id/btn_up5_p4" />
 
@@ -180,9 +185,9 @@
         android:layout_height="wrap_content"
         android:text="+1"
         android:id="@+id/btn_up1_p3"
-        android:layout_below="@+id/score_player3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/score_player2"
+        android:layout_alignLeft="@+id/player3"
+        android:layout_alignStart="@+id/player3" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -191,8 +196,58 @@
         android:text="-1"
         android:id="@+id/btn_dn1_p3"
         android:layout_below="@+id/btn_up1_p3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/btn_up1_p3"
+        android:layout_alignStart="@+id/btn_up1_p3" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-5"
+        android:id="@+id/btn_dn5_p3"
+        android:layout_below="@+id/btn_up1_p3"
+        android:layout_toRightOf="@+id/player3"
+        android:layout_toEndOf="@+id/player3" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:id="@+id/btn_up1_p4"
+        android:layout_alignTop="@+id/btn_dn5_p3"
+        android:layout_alignLeft="@+id/btn_dn1_p4"
+        android:layout_alignStart="@+id/btn_dn1_p4" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        android:id="@+id/btn_dn1_p4"
+        android:layout_below="@+id/score_player4"
+        android:layout_alignLeft="@+id/player4"
+        android:layout_alignStart="@+id/player4" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+5"
+        android:id="@+id/btn_up5_p4"
+        android:layout_below="@+id/score_player4"
+        android:layout_toRightOf="@+id/player4"
+        android:layout_toEndOf="@+id/player4" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-5"
+        android:id="@+id/btn_dn5_p4"
+        android:layout_below="@+id/btn_dn1_p4"
+        android:layout_alignRight="@+id/score_player4"
+        android:layout_alignEnd="@+id/score_player4" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -201,68 +256,16 @@
         android:text="+5"
         android:id="@+id/btn_up5_p3"
         android:layout_below="@+id/score_player3"
-        android:layout_alignRight="@+id/score_player3"
-        android:layout_alignEnd="@+id/score_player3" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-5"
-        android:id="@+id/btn_dn5_p3"
-        android:layout_below="@+id/btn_up5_p3"
-        android:layout_alignRight="@+id/btn_up5_p3"
-        android:layout_alignEnd="@+id/btn_up5_p3" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+1"
-        android:id="@+id/btn_up1_p4"
-        android:layout_below="@+id/score_player4"
-        android:layout_alignLeft="@+id/score_player4"
-        android:layout_alignStart="@+id/score_player4" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-1"
-        android:id="@+id/btn_dn1_p4"
-        android:layout_alignTop="@+id/btn_dn5_p3"
-        android:layout_alignLeft="@+id/btn_up1_p4"
-        android:layout_alignStart="@+id/btn_up1_p4" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+5"
-        android:id="@+id/btn_up5_p4"
-        android:layout_above="@+id/btn_dn1_p4"
-        android:layout_alignRight="@+id/btn_dn5_p2"
-        android:layout_alignEnd="@+id/btn_dn5_p2" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-5"
-        android:id="@+id/btn_dn5_p4"
-        android:layout_alignBottom="@+id/btn_dn1_p4"
-        android:layout_alignRight="@+id/btn_up5_p4"
-        android:layout_alignEnd="@+id/btn_up5_p4"
-        android:layout_alignLeft="@+id/btn_up5_p4"
-        android:layout_alignStart="@+id/btn_up5_p4" />
+        android:layout_toRightOf="@+id/player3"
+        android:layout_toEndOf="@+id/player3" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/loser"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/btn_dn1_p4"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/btn_dn5_p2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" />
 
 </RelativeLayout>
